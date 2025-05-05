@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+public class ClassManager : MonoBehaviour
 {
     public TextMeshProUGUI txtResultado;
     public TMP_InputField inputClave;
     string claveCorrecta = "fogolin";
     string claveIngresada;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,11 @@ public class UIManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { }
-    public void VerificarClave()
+    {
+
+    }
+
+    public void verificarClave()
     {
         claveCorrecta = inputClave.text;
         if (claveIngresada == claveCorrecta)
@@ -29,7 +33,6 @@ public class UIManager : MonoBehaviour
         {
             txtResultado.text = "clave incorrecta";
         }
+
     }
 }
-     
-
